@@ -1,14 +1,13 @@
 Name: Forrest Dunlap
 ID: 7589967074
 
-So this assignment has actually been really great. I effectively wrote the code
-as assigned except for one (probably less than optimal) part. When I send the
+So this assignment has actually been really great. When I send the
 jobs to either of the compute servers, I send each job and wait for the
 immediate response. This might be naive, but I have my reasons: 1) It keeps my
 data in order, 2) the operations are so light/trivial that there is virtually 0
-processing time, and 3) it is simply straightforward and easy to understand.
+processing time, and 3) it is straightforward and easy to understand.
 Otherwise, everything is pretty standard. You've got a client that takes in text
-files that meet the project constraints, sends them to an edge server, which
+files that meet the project constraints, sends them to an edge/broker server, which
 then sends them to their respective compute server. Bam, boom, done.
 
 client.cpp/client.h - this is the client. It takes in a text file, formats its
@@ -31,12 +30,8 @@ TO RUN: Nothing special! Yay!
 
 Message format: I almost always use char arrays over the network. It's easy.
 It's straightforward. I can turn them into strings, and parse, or whatever.
-Again - easy. (I also don't have to serialize.)
 
 Idiosyncrasies/Fail points: None that my testing revealed (including multiple
-concurrent connections). Possibly full 0's, though I'm pretty sure they work,
-too.
+concurrent connections).
 
-Reuse: I didn't ~directly~ reuse code, but I heavily relied on Beej for much of
-the procedure. That being said, the code should be different enough. I did
-retype it all.
+Reuse: Credit where credit is due - Beej's guide was a HUGE help during this project.
