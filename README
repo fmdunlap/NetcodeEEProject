@@ -1,7 +1,4 @@
-Name: Forrest Dunlap
-ID: 7589967074
-
-So this assignment has actually been really great. When I send the
+So this project has actually been really great. When I send the
 jobs to either of the compute servers, I send each job and wait for the
 immediate response. This might be naive, but I have my reasons: 1) It keeps my
 data in order, 2) the operations are so light/trivial that there is virtually 0
